@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        {#Start Navigation bar #}
+        <div class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <a class="navbar-brand" href="{{ path('sort') }}"> Celfone Trading Limited</a>
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse navHeaderCollapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{ path('sort') }}">Home</a></li>
+                        <li><a href="{{ path('about') }}">About us</a></li>
+                        <li><a href="{{ path('news') }}">News</a></li>
+                        <li><a href="{{ path('contact') }}">Contact Us </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {#End navigation bar #}
+
+
+    </body>
+</html>

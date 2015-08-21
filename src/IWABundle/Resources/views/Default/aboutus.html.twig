@@ -1,0 +1,79 @@
+{% extends '::choco.html.twig' %}
+
+
+{% block maintitle %} About us {% endblock %}
+
+    {% block stylesheet %}
+        <link rel="stylesheet" href="{{ asset('bundles/css/aboutus.css') }}"/>
+    {% endblock %}
+
+    {% block slider %}
+
+    {% endblock %}
+
+
+    {% block content %}
+
+
+
+        {#Start-Team Slider#}
+    {% endblock %}
+
+
+
+
+
+    {#End-Team Slider#}
+
+    {% block js %}
+        <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+        <script>
+            var locations = [
+                ['Unit 34 Ankerside Shopping Center, George Street Tamworth Staffordshire B79 7LG', 52.6324262, -1.693543, 4],
+                ['Coventry Arena Park Unit 8 Classic Drive Coventry CV6 6AS', 52.443199, -1.491608, 5],
+                ['Unit 47 Frenchgate Centre, Doncaster, South Yorkshire, DN1 1LF', 53.5228151, -1.1361061, 3],
+                ['Unit 9 Thurmaston Shopping Centre, Barkby Thorpe Lane, Thursmaston, Leicestshire, LE4 8GP', 52.6839014, -1.0911147, 2],
+                ['4 Bakers Lane Lichfield, Staffordshire, WS13 6NF', 52.6833141, -1.8265474, 6],
+                ['25/26 Market Place, Loughborough, Leicestershire LE11 3EB', 52.77173939999999,-1.2060519, 7],
+                ['30 Castle Hinckley, LE10 1DB', 52.5416478,-1.3716071, 7],
+                ['Unit 16 Warwickshire Shopping Park, Kynner Way, Binley Coventry CV3 2SA', 52.3984575,-1.4358913, 7],
+                ['Unit 17, 3 Silver Street Pescod Square Boston, Lincolnshire, PE21 6QU', 52.9788404, -0.0218054, 7],
+                ['11 The Mall Gold Street, Kettering Northamptonshire, NN16 8JL', 52.4011062, -0.7274069, 10 ],
+                ['19-21 Stodman Street Newark On Trent, Nottinghamshire, HG24 1AT', 53.0761555, -0.810349,11],
+                ['35 Lumley Road, Skegness Lincolnshire PE25 3LL', 53.14345220000001, 0.3379893],
+                ['67 High Road, Beeston NG9 2LE', 52.92820159999999, -1.2136086],
+                ['Unit 34 Fletcher Mall, Beaumont Shopping Centre Leicester, LE4 1DG', 52.6368778, -1.1397592],
+                ['Unit 7 St Marys Place Market Harborough, Leicestershire LE16 7DR', 52.4774156, -0.9187976999999999],
+                ['Unit C, Junction One Retail Park Rugby CV21 1RW', 52.38501840000001, -1.2569261],
+
+                ['Fletcher Mall', 52.6661321, -1.16621],
+                ['One Retail Park', 52.38501840000001, -1.2569261],
+            ];
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 7,
+                center: new google.maps.LatLng(52.3555177, -1.1743197),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            var infowindow = new google.maps.InfoWindow();
+
+            var marker, i;
+
+            for( i=0; i<locations.length; i++){
+                marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map
+                });
+
+                google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                infowindow.setContent(locations[i][0]);
+                infowindow.open(map, marker);
+                }
+                })(marker, i));
+            }
+
+        </script>
+
+    {% endblock %}

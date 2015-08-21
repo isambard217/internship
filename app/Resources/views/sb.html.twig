@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ asset('bundles/css/bootstrap.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('bundles/css/foot.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('bundles/css/style.css') }}"/>
+    </head>
+    <body>
+
+    {# Start nav top#}
+        <nav id="navbar" class="navbar navar-default navbar-default navbar-fixed-top" role="naviation" style="display: none;">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbarCollapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ path('sort') }}"><img src="{{ asset('bundles/images/logo.jpg') }}" width="200px" alt=""/></a>
+                </div>
+                <div class="collapse navbar-collapse navbarCollapse">
+                    <div class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="{{ path('sort') }}">Home</a>
+                            </li>
+                            {#<li class="dropdown">#}
+                            {#<a href="http://luckyrabbitdesigns.com/projects.php" data-target="#" data-toggle="dropdown" class="dropdown-toggle">Projects</a>#}
+                            {#</li>#}
+                            <li>
+                                <a href="{{ path('stores') }}">Stores</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('contact') }}">Contact</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('aboutus') }}">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    {# end nav top #}
+
+     {# Start-Side bar left#}
+        <div class="container " style="z-index: 100;" >
+            <div class="row">
+                <div class="list-group">
+                    <a href="#" class="list-group-item">
+                        asdasdsad
+                    </a>
+                </div>
+            </div>
+        </div>
+     {# End-Side bar left#}
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="{{ asset('bundles/js/bootstrap.js') }}" type="javascript/text"></script>
+    </body>
+</html>

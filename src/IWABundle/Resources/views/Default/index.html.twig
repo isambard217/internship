@@ -1,0 +1,157 @@
+  {% extends '::choco.html.twig' %}
+
+  {% block stylesheet %}
+      <link rel="stylesheet" href="{{ asset('bundles/css/style.css') }}"/>
+      <link rel="stylesheet" href="{{ asset('bundles/css/layout.css') }}"/>
+      <link rel="stylesheet" href="{{ asset('bundles/css/index.css') }}"/>
+      <style>
+          article{
+              margin: auto;
+          }
+
+          .co{
+                float: right;
+                background: #e0e0e0;
+                font-size: 2em;
+                width: 35%;
+                text-align:center;
+          }
+      </style>
+  {% endblock %}
+
+  {% block slider %}
+
+      {#<div class="container">#}
+          {#<div class="row">#}
+              {#<div class="col-md-2">#}
+                  {#<img src="{{ asset('bundles/images/logo.jpg') }}" alt="bar"/>#}
+          {#</div>#}
+      {#</div>#}
+
+      {#</div>#}
+
+      <div id="my_carousel" class="carousel slide">
+          <ol class="carousel-indicators">
+              <li data-target = "#my_carousel" data-slide-to = "0" class="active"></li>
+              <li data-target = "#my_carousel" data-slide-to = "1"></li>
+              <li data-target = "#my_carousel" data-slide-to = "2"></li>
+          </ol>
+          <div class="carousel-inner i">
+              <div class="item active">
+                  <img src="{{ asset('bundles/images/five.JPG') }}" id="lucky" alt ="i1" class="img-responsive lucky">
+                    <div class="carousel-caption">
+                        <h2> We put our Customers first </h2>
+                    </div>
+              </div>
+
+              <div class="item">
+                  <img src="{{ asset('bundles/images/two.JPG') }}" id="lucky" alt = "i2" class="img-responsive lucky">
+                  <div class="carousel-caption">
+                      <h2> We put our Customers first </h2>
+                  </div>
+              </div>
+
+              <div class="item">
+                  <img src="{{ asset('bundles/images/one.JPG') }}" id="lucky" alt = "i3" class="img-responsive">
+                  <div class="carousel-caption">
+                      <h2> We put our Customers first </h2>
+                  </div>
+              </div>
+          </div>
+
+          <a class="carousel-control left" id="isamColor" href="#my_carousel" data-slide="prev">
+              <span class="icon-prev left"></span>
+          </a>
+          <a class="carousel-control right left" id="isamColor" href="#my_carousel" data-slide="next">
+              <span class="icon-next right"></span>
+          </a>
+      </div>
+
+  {% endblock %}
+
+
+  {% block content %}
+
+      <div class="container-fluid" id="maincontext">
+        <div class="row">
+
+            <div class="col-md-5">
+                <article>
+                   <h1> Heading</h1>
+                   <p>
+                       Welcome to Celfone Limited we are a franchise of the famous Telefornica Brand, given the opportunity
+                       we hope to tell you more about our website and what it involves.
+                       I hope you are well thank you
+                       MID Communications is an.
+                       For just over 10 years we've lived, breathed and followed the ethos of O2; service, customer, development and education.
+                       From our first store in Thornton-Cleveleys we've continued to grow to the point where we now have eight stores
+                       and future expansion just around the corner. At the heart of our organisation are our people.
+                       We believe in developing the potential within all of us, incentivising, motivating and educating our
+                   </p>
+                   <p>
+                        teams so that they are able to raise and meet all the challenges they face in a fast paced and competitive business environment.
+                        For us perfection is never achieved, we always strive to do better, be more efficient and be more innovative.
+                        Creating this culture has seen us grow and develop an SMB centre from scratch, in the process creating 10 new jobs in the Oldham area, being nominated as Rochdale business of the year as well as winning the internal accolades from O2.
+                        Our focus is now on growth as we seek to replicate our success beyond our traditional sphere
+                        of business from around Manchester to Cheshire as well as improve our efficiency in new, digital ways.
+                        This year has already seen us launch a Consumer Call Centre to look after our existing customer base and develop
+                        a marketing position filled from within our local community with an apprentice. We continue to be on the cutting edge
+                        of innovation, disrupting convention and launching a fully interactive and comprehensive website where all our teams
+                        can access instant communications, briefs and support​
+                        ​Our ambition is limitless, our pace relentless and our commitment to our teams and customers unshakeable!​
+                   </p>
+                </article>
+            </div>
+
+                <div class="col-md-3">
+
+                    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/6Hq6xMhen-/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">O2 Coventry Arena launch #HelloCoventryArenaPark</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Celfone (@celfonefamily) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-08-08T10:57:35+00:00">Aug 8, 2015 at 3:57am PDT</time></p></div></blockquote>
+
+                </div>
+
+            <div class="row">
+                <div class="col-md-4">
+
+                    <a class="twitter-timeline"
+                       data-widget-id="600720083413962752"
+                       href="https://twitter.com/celfonefamily"
+                       width="300"
+                       height="300">
+                        Tweets by @TwitterDev
+                    </a>
+
+                </div>
+            </div>
+
+         </div>
+      </div>
+
+
+  {% endblock %}
+
+
+    {% block js %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="{{ asset('bundles/js/bootstrap.js') }}"></script>
+        <script src="{{ asset('bundles/js/mobilebuttondropd.js') }}"></script>
+        <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.carousel').carousel({
+                    interval: 3000
+                })
+            });
+
+            $(document).ready(function(){
+                var co = $('article').find('span.co').each(function(){
+                    var $this= $(this);
+
+                    $('<blockquote></blockquote>',{
+                        class: 'co',
+                        text: $this.text()
+                    }).preprendTo($this.closet('p'));
+                });
+            });
+        </script>
+
+    {% endblock %}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="{{ asset('bundles/css/bootstrap.min.css') }}"/>
+            <link rel="stylesheet" href="{{ asset('bundles/css/foot.css') }}"/>
+            <link rel="stylesheet" href="{{ asset('bundles/css/style.css') }}"/>
+            <title>{% block maintitle %} Default {% endblock %}</title>
+                {% block stylesheet %}
+
+                {% endblock %}
+        </head>
+
+        <body>
+            <div class="mainpart">
+
+            {#Start Navigation bar #}
+            <nav id="navbar" class="navbar navar-default navbar-default navbar-fixed-top" role="naviation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbarCollapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse navbarCollapse">
+                        <div class="nav navbar-nav navbar-right">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="{{ path('sort') }}">Home</a>
+                                </li>
+                                {#<li class="dropdown">#}
+                                    {#<a href="http://luckyrabbitdesigns.com/projects.php" data-target="#" data-toggle="dropdown" class="dropdown-toggle">Projects</a>#}
+                                {#</li>#}
+                                <li>
+                                    <a href="{{ path('stores') }}">Stores</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('contact') }}">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('aboutus') }}">About Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            {#End Navigation bar #}
+
+             {# Start body#}
+            <div class="tee">
+                {% block slider %}
+
+
+
+                {% endblock %}
+            </div>
+             {#End Body#}
+
+            {#Start body #}
+            <div class="pee">
+                {% block content %}
+
+
+
+                {% endblock %}
+            </div>
+            {#End content #}
+
+
+            {# Start Footer#}
+            {#navbar-inverse navbar-static-bottom#}
+            {#class="navbar navar-default navbar-default navbar-fixed-top"#}
+            <nav class="site-footer navbar navbar-default navbar-static-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="bottom-footer">
+                            <div class="col-md-5">
+                                <address style="color:black;">Copyright 2015 © Celfone Trading Ltd. All rights reserved.</address>
+                            </div>
+                            <div class="col-md-7">
+                                <ul class="footer-nav">
+                                    <li><a href="https://instagram.com/celfonefamily/"><img src="{{ asset('bundles/images/insta.png') }}" alt="instagram"/></a></li>
+                                    <li><a href="https://twitter.com/celfonefamily"><img src="{{ asset('bundles/images/twittertwilight.png') }}" alt="twitter"/></a></li>
+                                    <li><a href="https://www.linkedin.com/company/celfone-trading-limited"><img src="{{ asset('bundles/images/in.png') }}" style="width:25px; height: 29px;" alt="linkedin"/></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            {# End Footer#}
+
+
+            {#Start javascript#}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+            <script src="{{ asset('bundles/js/bootstrap.js') }}" type="javascript/text"></script>
+            <script>
+                    $('.drop8down-toggle').click(function(e) {
+                        e.preventDefault();
+                        setTimeout($.proxy(function() {
+                            if ('ontouchstart' in document.documentElement) {
+                                $(this).siblings('.dropdown-backdrop').off().remove();
+                            }
+                        }, this), 0);
+                    });
+            </script>
+
+            {% block js %}
+
+            {% endblock %}
+            {#End javascript #}
+
+            </div>
+        </body>
+</html>

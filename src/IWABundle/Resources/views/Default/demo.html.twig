@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="{{ asset('bundles/css/bootstrap.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('bundles/css/bootstrap.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('bundles/css/style.css') }}"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        {% block stylesheet %}
+
+
+        {% endblock %}
+    </head>
+    <body>
+        {#Start Navigation bar #}
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <a class="navbar-brand" href="{{ path('sort') }}"> Celfone Trading Limited </a>
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse navHeaderCollapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{ path('sort') }}" class="active" >Home</a></li>
+                        <li><a href="{{ path('about') }}">About us</a></li>
+                        <li><a href="{{ path('news') }}">News</a></li>
+                        <li><a href="{{ path('contact') }}" class="conus">Contact Us </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {#End navigation bar #}
+
+            {#Start Main content#}
+                <div class="slider">
+                    <ul>
+                        <li><img src="{{ asset('bundles/images/one.JPG') }}" width="600px" height="300px" alt="image"/></li>
+                        <li><img src="{{ asset('bundles/images/two.JPG') }}" width=600px" height="300px" alt="image"/></li>
+                        <li><img src="{{ asset('bundles/images/three.JPG') }}" width="600px" height="300px" alt="image"/></li>
+                        <li><img src="{{ asset('bundles/images/four.JPG') }}" width="600px" height="300px" alt="image"/></li>
+                    </ul>
+                </div>
+                <div id="slider-nav">
+                    <button data-dir="prev">Prev</button>
+                    <button data-dir="next">Next</button>
+                </div>
+
+            {#End Main content#}
+
+
+        {#This is will the contact form#}
+
+
+
+        {#End of the contact form#}
+
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="{{ asset('bundles/js/bootstrap.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/js/script.js') }}"></script>
+        <script>
+                var container = $('div.slider').css('overflow','hidden').children('ul'),
+                        slider = new Slider(container, $('#slider-nav'));
+
+                slider.nav.find('button').on('click', function(){
+                    slider.setCurrent($(this).data('dir'));
+                    slider.transition();
+                });
+        </script>
+    </body>
+
+</html>
+

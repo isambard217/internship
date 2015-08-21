@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="{{ asset('bundles/css/bootstrap.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('bundles/css/bootstrap.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('bundles/css/style.css') }}"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        {% block stylesheet %}
+
+
+        {% endblock %}
+
+        {% block maintitle %}<title>Default title</title>{% endblock %}
+
+    </head>
+
+<body>
+
+
+{% block mainc %}
+      {% block hotcontent %}
+
+          Default
+
+        {% block contact %}
+        <div class="contact">
+            Default
+        </div>
+
+        {% endblock %}
+
+    {% endblock %}
+{% endblock %}
+
+
+{#Start Main content#}
+{#<div class="container center">#}
+    {#<div class="slider">#}
+                {#<ul class="center img-responsive">#}
+                    {#<li><img src="{{ asset('bundles/images/one.JPG') }}" width="600px" height="300px" alt="image"/></li>#}
+                    {#<li><img src="{{ asset('bundles/images/two.JPG') }}" width=600px" height="300px" alt="image"/></li>#}
+                    {#<li><img src="{{ asset('bundles/images/three.JPG') }}" width="600px" height="300px" alt="image"/></li>#}
+                    {#<li><img src="{{ asset('bundles/images/four.JPG') }}" width="600px" height="300px" alt="image"/></li>#}
+                    {#<li><img src="{{ asset('bundles/images/padme.jpg') }}" class="img-responsive" width="600px" height="300px" alt="Slider"/></li>#}
+                {#</ul>#}
+    {#</div>#}
+{#</div>#}
+{#End Main content#}
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="{{ asset('bundles/js/bootstrap.min.js') }}"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="{{ asset('bundles/js/bootstrap.js') }}" type="javascript/text"></script>
+
+{% block js %}
+
+
+{% endblock %}
+
+</body>
+
+</html>
+

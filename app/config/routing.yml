@@ -1,0 +1,4 @@
+iwa:
+    resource: "@IWABundle/Controller/"
+    type:    annotation
+    prefix:   /
